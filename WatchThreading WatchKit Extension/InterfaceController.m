@@ -27,10 +27,10 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
       NSURL *url = [NSURL URLWithString:@"http://placehold.it/120x100"];
       NSData *data = [NSData dataWithContentsOfURL:url];
-      UIImage *kitten = [UIImage imageWithData:data];
+      UIImage *placeholder = [UIImage imageWithData:data];
 
       dispatch_async(dispatch_get_main_queue(), ^{
-        [self.image setImage:kitten];
+        [self.image setImage:placeholder];
       });
     });
   }
